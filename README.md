@@ -25,3 +25,12 @@ The **Workflow Decision History** project is a Spring Boot application designed 
 1. Clone the repository:
    ```bash
    git clone <repository-url>
+    ```
+2. CURL FOR processDecisionHistory
+    ```bash
+    curl --location 'http://localhost:8081/graphql' \--header 'Content-Type: application/json' \--data '{"query":"mutation {\r\n  processDecisionHistory(\r\n        decision: \"INI\"\r\n        userId: \"neeraj\"\r\n        caseId: \"123\"\r\n    \r\n       \r\n    ) {\r\n    decisionId\r\n    decision\r\n    userId\r\n    caseId\r\n    remarks\r\n    dateTime\r\n    \r\n  }\r\n}","variables":{}}'
+    ```
+3. CURL FOR getDecisionHistoryByCaseId
+    ```bash
+    curl --location 'http://localhost:8081/graphql' \--header 'Content-Type: application/json' \--data '{"query":" query {\r\n    getDecisionHistory(\r\n        caseId: \"123\"\r\n    ){\r\n    decisionId\r\n    decision\r\n    userId\r\n    caseId\r\n    remarks\r\n    dateTime\r\n    \r\n  }\r\n }","variables":{}}'
+   ```
