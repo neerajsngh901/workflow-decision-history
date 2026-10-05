@@ -1,0 +1,31 @@
+type DecisionHistory {
+    decisionId: ID
+    decision: String
+    stage: String
+    userId: String
+    caseId: String
+    stUpper: String
+    stLower: String
+    stOther: String
+    remarks: String
+    dateTime: String
+}
+
+type Query {
+    getDecisionHistory(
+        caseId: String!
+    ): [DecisionHistory]!
+}
+
+type Mutation {
+    processDecisionHistory(
+        decision: String!
+        stage: String!
+        userId: String!
+        caseId: String!
+        stUpper: String
+        stLower: String
+        stOther: String
+        remarks: String
+    ): DecisionHistory!
+}
