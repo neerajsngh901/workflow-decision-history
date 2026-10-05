@@ -24,8 +24,6 @@ public class DecisionHistory {
     @Column(nullable = false, length = 100)
     private String decision;
 
-    @Column(length = 100)
-    private String stage;
 
     @Column(length = 100)
     private String userId;
@@ -33,9 +31,6 @@ public class DecisionHistory {
     @Column(length = 30)
     private String caseId;
 
-    private Boolean stUpper;
-    private Boolean stLower;
-    private Boolean stOther;
 
     @Column(columnDefinition = "TEXT")
     private String remarks;

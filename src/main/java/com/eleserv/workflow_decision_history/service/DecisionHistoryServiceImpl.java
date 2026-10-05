@@ -22,15 +22,11 @@ public class DecisionHistoryServiceImpl implements DecisionHistoryService {
            DecisionHistory decisionHistory = DecisionHistory.builder()
                    .caseId(decisionHistoryDTO.caseId())
                    .decision(decisionHistoryDTO.decision())
-                   .stage(decisionHistoryDTO.stage())
-                   .stOther(decisionHistoryDTO.stOther())
-                   .stUpper(decisionHistoryDTO.stUpper())
-                   .stLower(decisionHistoryDTO.stLower())
                    .remarks(decisionHistoryDTO.remarks())
                    .dateTime(java.time.LocalDateTime.now())
                    .build();
 
-           System.out.println("Saving DecisionHistory: " + decisionHistory + " at " + java.time.LocalDateTime.now() + " caseId: " + decisionHistoryDTO.caseId() + " decision: " + decisionHistoryDTO.decision() + " stage: " + decisionHistoryDTO.stage() + " stOther: " + decisionHistoryDTO.stOther() + " stUpper: " + decisionHistoryDTO.stUpper() + " stLower: " + decisionHistoryDTO.stLower());
+           System.out.println("Saving DecisionHistory: " + decisionHistory + " at " + java.time.LocalDateTime.now() + " caseId: " + decisionHistoryDTO.caseId() + " decision: " + decisionHistoryDTO.decision() + " remarks: " + decisionHistoryDTO.remarks());
            return decisionHistoryReposistory.save(decisionHistory);
 
        }

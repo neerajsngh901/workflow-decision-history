@@ -28,20 +28,12 @@ public class DecisionHistoryController {
     public DecisionHistory processDecisionHistory(
             @Argument String caseId,
             @Argument String decision,
-            @Argument String stage,
-            @Argument Boolean stOther,
-            @Argument Boolean stUpper,
-            @Argument Boolean stLower,
             @Argument String remarks,
             @Argument String userId
     ) {
         DecisionHistoryDTO decisionHistory = DecisionHistoryDTO.builder()
                 .caseId(caseId)
                 .decision(decision)
-                .stage(stage)
-                .stOther(stOther)
-                .stUpper(stUpper)
-                .stLower(stLower)
                 .remarks(remarks)
                 .userId(userId)
                 .build();
