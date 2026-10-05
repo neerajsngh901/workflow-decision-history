@@ -21,6 +21,7 @@ public class DecisionHistoryServiceImpl implements DecisionHistoryService {
         }else{
            DecisionHistory decisionHistory = DecisionHistory.builder()
                    .caseId(decisionHistoryDTO.caseId())
+                   .userId(decisionHistoryDTO.userId())
                    .decision(decisionHistoryDTO.decision())
                    .remarks(decisionHistoryDTO.remarks())
                    .dateTime(java.time.LocalDateTime.now())
