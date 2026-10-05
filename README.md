@@ -24,7 +24,7 @@ The **Workflow Decision History** project is a Spring Boot application designed 
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/neerajsngh901/workflow-decision-history.git
     ```
 2. CURL FOR processDecisionHistory
     ```bash
